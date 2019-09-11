@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MyGarage.Vehicles.AircraftClasses
 {
-    abstract class Aircraft : Vehicle
+    abstract class Aircraft : Vehicle, IFlyer
     {
         public override bool Go()
         {
@@ -19,6 +19,10 @@ namespace MyGarage.Vehicles.AircraftClasses
         public override void Stop()
         {
             Console.WriteLine("The aircraft lands!");
+        }
+        public void Chemtrails()
+        {
+            Console.WriteLine($"The {TypeOfVehicle} is spreading a thick smoke behind it to help the citizens obey");
         }
     }
 }

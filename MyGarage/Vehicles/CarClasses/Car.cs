@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MyGarage.Vehicles.CarClasses
 {
-    abstract class Car : Vehicle
+    abstract class Car : Vehicle, IDriver
     {
 
         public override bool Go()
@@ -20,6 +20,10 @@ namespace MyGarage.Vehicles.CarClasses
         public override void Stop()
         {
             Console.WriteLine($"The {TypeOfVehicle} came to a screeching halt.");
+        }
+        public void Crash()
+        {
+            Console.WriteLine($"GOD DAMN! That parked car just came out of nowhere! The {TypeOfVehicle} is totaled");
         }
     }
 }

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace MyGarage.Vehicles.WatercraftClasses
 {
-    abstract class Watercraft : Vehicle
+    abstract class Watercraft : Vehicle, IFloater
     {
         public override bool Go()
         { 
@@ -21,6 +21,10 @@ namespace MyGarage.Vehicles.WatercraftClasses
         public override void Stop()
         {
             Console.WriteLine($"The {TypeOfVehicle} comes to a stop");
+        }
+        public void Sink()
+        {
+            Console.WriteLine($"Aw fuck the {TypeOfVehicle} is fucking sinking dude!");
         }
     }
 }
